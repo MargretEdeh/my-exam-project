@@ -24,7 +24,7 @@ export default function Layout() {
           <li><NavLink className='link' to='/'>Home</NavLink> </li>
           <li><NavLink className='link' to='/hub'>Hub</NavLink> </li>
           <li><NavLink className='link' to='/privacy'>Privacy</NavLink> </li>
-          <li><NavLink className='link' to='/login'>Login</NavLink> </li>
+          <li><NavLink className='link' to='/account'>Account</NavLink> </li>
          </ul>
          {menu ? Cancel: MenuBar}
          {menu && 
