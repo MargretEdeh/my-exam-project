@@ -10,13 +10,10 @@ import {
 
 
 
-export default function FrontEnd() {
+export default function BackEnd() {
   const {users, skip, page, setPage, PerPage, isLoading, pages}= ApiUserContext()
 
-//  if(isLoading)
-//  return ( 
-//   <h1>Loading...</h1>
-//  )
+  
   
   return (
     <div className='frontend'>
@@ -29,15 +26,13 @@ export default function FrontEnd() {
       <AiFillStar className='icon2'/>
 
      </div>
-     <h2 className='top2'>FrontEnd Enthusiast </h2>
+     <h2 className='top2'>BackEnd Enthusiast </h2>
      
         </div>  
-        {isLoading?  <h1>Loading..</h1> :
+        { isLoading? <h1>Loading...</h1> :
         <div className='users'>
-          
-          {users?.slice(skip, skip + PerPage)
-          .map((each)=>{
-            const {name, picture, location ,login} = each;
+          {users?.slice(skip, skip + PerPage).map((each)=>{
+            const {name, picture,  location, login} = each;
             return(
               <div className='each-user'>
                 <img src={picture.large} alt={name.first} className='friend'/>
@@ -54,13 +49,13 @@ export default function FrontEnd() {
         </div>
 }
 
-        {<button className='btn1'disabled={page<=1} aria-disabled={page<=1} onClick={()=> setPage((prev)=> prev-1)
+        {<button className='btn1'disabled={page<=1} onClick={()=> setPage((prev)=> prev-1)
           }>Prev</button> }
           {Array.from({length: pages}, (_, index)=> index +1).map((num)=>{
             return(
             <button className='btn2' onClick={()=> setPage(num)}>{num} </button>
          ) })}
-          {<button className='btn1' aria-disabled={page>=pages} disabled={page>=pages} onClick={()=> setPage((prev)=>prev+ 1)}>Next</button>}
+          {<button className='btn1' disabled={page>=pages} onClick={()=> setPage((prev)=>prev+ 1)}>Next</button>}
 
      </div>
      <div className='outlet'>

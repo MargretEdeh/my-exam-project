@@ -83,3 +83,9 @@ h2{
 h3{
     font-size: 28px;
 }
+.error{
+    background-image: url('error.svg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}

@@ -11,6 +11,7 @@ export default function Hub() {
             <Navigate to='/'/>
         )
     }
+
     
   return (
     <div className='hub-outlet'>
