@@ -33,13 +33,13 @@ try{ await googleSignIn()
         <div className='dashboard'>
         <img src={pic2} alt='phone pic' className='pic'/>
         <div className='description' >
-            <h1>Connect with developers around the world  <FcGlobe/> </h1>
+            <h1 className='dev' >Connect with developers around the world  <FcGlobe/> </h1>
             <h2>The Hub where like Minded People Meet
             <br/>
             <BiCodeAlt className='icon2' />
 
             </h2>
-            <br/>
+            {/* <br/> */}
             
 
             <h3 className='h3'> Get Started 

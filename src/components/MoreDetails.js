@@ -25,7 +25,8 @@ export default function MoreDetails() {
     <div className='up'>
       {/* <h1> hello : {userId} </h1> */}
 
-
+      <div className='go-back'> < FaArrowLeft className='back' onClick={()=> navigate('/hub/frontend')}/>
+   </div>
       <img src={each.picture.large} alt={each.name.first} className='param-img' />
       <h4 className='h4'>Hello i'm {each.name.first}  {each.name.last} </h4>
         <p className='p-tag'>I am a frontend developer currently residing at {each.location.country}. I'm  paassionate about frontend development, aesthetic designs, and open sourcing. Also a part-time Technical Writer. I have alot of projects that are built with <b>Vanilla Javascript, React, vue etc </b>

@@ -57,6 +57,51 @@
 .background{
     background-image: url('pic1.svg');
     background-repeat: no-repeat;
+}
+@media screen and (max-width:500px){
+  .hub{
+    width: 30%;
+}
 
+.li2{
+    list-style: none;
+    margin: 5px;
+    margin-left: 1em;
+    font-size: 16px;
+  }
+  .li3{
+    margin-left: 0.6em;
+    font-size: 14px;
+    padding: 1px;
+    
+  }
+  .display{
+    font-size: 1px;
+    display: none;
+  }
+  .google-pic{
+    width: 70px;
+    border: 2px solid  rgb(252, 77, 14);
+   border-radius: 55%;
+  }
+  .account{
+    margin: 10px 5px 5px 1em;
+    display: flex;
+    flex-direction: column;
+}
+.hub-outlet{
+  display: flex;
+  /* flex-direction: column; */
+}
+.index{
+    display: block;
+    /* flex-direction: column; */
+    text-align: center;
+    margin: 6em 20px;
 
+}
+.background{
+    background-image: url('pic1.svg');
+    background-repeat: no-repeat;
+}
 }

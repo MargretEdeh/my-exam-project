@@ -43,7 +43,7 @@ export default function FrontEnd() {
                 <img src={picture.large} alt={name.first} className='friend'/>
                 <div className='details' >
                 <h2 className='name'>Eng. {name.first}  {name.last} </h2>
-                <h4>{location.city}</h4>
+                <h4 className='city'>{location.city}</h4>
                 <h4 className='name'>{location.country} </h4>
                 <NavLink key={login.uuid} className='more' to={login.uuid} >More Details </NavLink>
                  </div>
