@@ -19,9 +19,21 @@ export default function Account() {
 setTimeout(()=>{alert('login first')} ,1000)
       }
     }, [user ,Navigate])
+    const handlePremuim= ()=>{
+      alert(" May be in the future")
+    }
   return (
-    <div>
-      <button className='btn' onClick={handleLogout}>Log Out </button>
+    <div className='logout'>
+      <h3>Always Remember to Sign in with {user.email} and keep Your details safe </h3>
+      <h4>Thanks for using this App</h4>
+      <div className='account'>
+            <img src={user.photoURL} className='google-pic' alt='profile pic'/>
+            <h2>{user.displayName} </h2>
+        </div>
+      
+      <button className='btn' onClick={handleLogout}> <b>Log Out</b> </button>
+      <button className='btn' onClick={handlePremuim} ><h2>Try Premuim Today</h2> </button>
+      
     </div>
   )
 }

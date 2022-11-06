@@ -63,6 +63,7 @@
    .mobile{
     display: none;
   }
+  
   @media screen and (max-width: 800px){
   .layout .large{
       display: none;
@@ -114,7 +115,7 @@
       top: 7.2%;
       width: 110%;
       height: 100%;
-      position: static;
+      position:static;
       left: 0;
       background-color: rgb(20, 18, 18);
       transform: translateX(0) ;
