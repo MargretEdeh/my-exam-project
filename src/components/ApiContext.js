@@ -10,7 +10,7 @@ export const ApiContextProvider=({children})=>{
 
   useEffect(()=>{
     setIsloading(true)
-    fetch(`https://randomuser.me/api/?page=100&results=10&seed=abc`)
+    fetch(`https://randomuser.me/api/?page=100&results=100&seed=abc`)
     .then((res)=> res.json())
     .then((res)=>{
       // console.log(res.results),

@@ -1,11 +1,26 @@
 // import { async } from '@firebase/util'
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import React, { useEffect } from 'react'
+import {  Navigate } from 'react-router-dom'
 import { UserContext } from './AuthContext'
 
 export default function Account() {
-  const Navigate = useNavigate()
+  // const Navigate = useNavigate()
+
     const { LogOut, user } =UserContext()
+//     useEffect(()=>{
+//       if(user === null){
+//   Navigate('/')
+// setTimeout(()=>{alert('login first')} ,1000)
+//       }
+//     }, [user ,Navigate])
+    
+if(!user){
+setTimeout(()=>{alert('login first')} ,1000)
+
+  return( 
+      <Navigate to='/'/>
+  )
+}
     const handleLogout = async () =>{
         try{ await LogOut()
 
@@ -13,12 +28,9 @@ export default function Account() {
             console.log(error.message)
         }
     }
-    useEffect(()=>{
-      if(user === null){
-  Navigate('/')
-setTimeout(()=>{alert('login first')} ,1000)
-      }
-    }, [user ,Navigate])
+    
+
+    
     const handlePremuim= ()=>{
       alert(" May be in the future")
     }

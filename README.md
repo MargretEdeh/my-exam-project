@@ -10,4 +10,4 @@
 ## The privacy Page is for testing Error Boundary
 ## Account is where you can Log Out
 
-# Here is the link to the project https://helpful-madeleine-200651.netlify.app
+# Here is the link to the project: https://my-exam-project-ruby.vercel.app/
