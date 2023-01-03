@@ -20,7 +20,7 @@ export default function Layout() {
     <div className='layout'>
       <div className='logo'>
       <BiCodeAlt className='icon'/>
-        <h1>Developers Arc</h1>
+        <h1 className='arc' >Developers Arc</h1>
       </div>
       <nav>
          <ul className='large'>

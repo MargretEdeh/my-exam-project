@@ -187,7 +187,7 @@ ol{
     .up{
       display: block;
         width: 100%;
-        position: absolute;
+        /* position: absolute; */
     /* background-color:blue; */
         margin-left:0;
         margin-top: 0;
@@ -201,6 +201,10 @@ ol{
     .top2{
         margin-right:5em;
         font-size: 18px;
+    }
+    .top{
+        width: 60%;
+        margin-bottom: 7px;
     }
     .input{
         margin: 0;
@@ -217,7 +221,7 @@ ol{
     .search{
         margin: 10px;
         padding: 0;
-        width: 70%;
+        width: 30%;
     }
    
     .users{

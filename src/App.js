@@ -21,9 +21,8 @@ export default function App() {
   return (
     <div className="App">
       <ApiContextProvider>
-
+        
       <AuthContextProvider>
-
         <Layout />
         <Routes>
           <Route path="/" element={<Home />} />
