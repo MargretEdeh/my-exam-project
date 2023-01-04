@@ -39,9 +39,10 @@ export default function FrontEnd() {
           .map((each)=>{
             const {name, picture, location ,login} = each;
             return(
+              
               <div className='each-user'>
                 <img src={picture.large} alt={name.first} className='friend'/>
-                <div className='details' >
+                <div className='details'>
                 <h2 className='name'>Eng. {name.first}  {name.last} </h2>
                 <h4 className='city'>{location.city}</h4>
                 <h4 className='name'>{location.country} </h4>
@@ -53,7 +54,7 @@ export default function FrontEnd() {
           
         </div>
 }
-
+       <div className='paginate'>
         {<button className='btn1'disabled={page<=1} aria-disabled={page<=1} onClick={()=> setPage((prev)=> prev-1)
           }>Prev</button> }
           {Array.from({length: pages}, (_, index)=> index +1).map((num)=>{
@@ -61,7 +62,7 @@ export default function FrontEnd() {
             <button className='btn2' onClick={()=> setPage(num)}>{num} </button>
          ) })}
           {<button className='btn1' aria-disabled={page>=pages} disabled={page>=pages} onClick={()=> setPage((prev)=>prev+ 1)}>Next</button>}
-
+      </div>
      </div>
      <div className='outlet'>
      <Outlet/>

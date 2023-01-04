@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: #161616;
     display: flex;
+    transition: 0.3s ease-in-out;
 }
 .list{
     padding: 0;
@@ -65,14 +66,14 @@
 
 .li2{
     list-style: none;
-    margin: 5px;
-    margin-left: 1em;
+    margin: 10px;
+    margin-left: 0.5em;
     font-size: 16px;
   }
   .li3{
-    margin-left: 0.6em;
-    font-size: 14px;
-    padding: 1px;
+    margin-left: 0.2em;
+    font-size: 12px;
+    padding-bottom: 5px;
     
   }
   .display{
@@ -103,5 +104,14 @@
 .background{
     background-image: url('pic1.svg');
     background-repeat: no-repeat;
+}
+.link{
+  font-size: 18px;
+ margin-right: 3px;
+
+}
+.h2{
+  margin-top: 10px;
+  font-size: 11px;
 }
 }

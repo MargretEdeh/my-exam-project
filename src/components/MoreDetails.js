@@ -20,9 +20,7 @@ export default function MoreDetails() {
     console.log(each)
   return (
     <div className='show'>
-     <div className='go-back'> < FaArrowLeft className='back' onClick={()=> navigate('/hub/frontend')}/>
-   </div>
-    <div className='up'>
+    <div className='up2'>
       {/* <h1> hello : {userId} </h1> */}
 
       <div className='go-back'> < FaArrowLeft className='back' onClick={()=> navigate('/hub/frontend')}/>

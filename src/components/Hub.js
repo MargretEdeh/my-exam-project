@@ -45,7 +45,7 @@ export default function Hub() {
         </ul>
         <div className='account'>
             <img src={user.photoURL} className='google-pic' alt='profile pic'/>
-            <h2>{user.displayName} </h2>
+            <h2 className='h2'>{user.displayName} </h2>
         </div>
         </div>
         {/* <h1>{user.displayName} </h1>
