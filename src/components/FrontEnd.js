@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom';
+import React, { useState } from 'react'
+import { NavLink, Outlet, useSearchParams } from 'react-router-dom';
 import './frontend.css'
 import { AiOutlinePicture} from "react-icons/ai";
 import { FiSearch} from "react-icons/fi";
@@ -9,21 +9,35 @@ import {
 } from "react-icons/ai";
 
 
-
 export default function FrontEnd() {
   const {users, skip, page, setPage, PerPage, isLoading, pages}= ApiUserContext()
+  const [search, setSearch]= useState("")
+  const HandleSearch=(e)=>{
+    setSearch(e.target.value)
+  }
+  const thesearch =(data)=>{
+    return data.filter((item)=> item.name.first.toLowerCase().includes(search.toLowerCase()))
+  }
 
-//  if(isLoading)
+  //  if(isLoading)
 //  return ( 
 //   <h1>Loading...</h1>
-//  )
+//  )\
+ 
+
+//  filter((user)=>{
+//   const {name} = user;
+//   name.first.toLowerCase().includes(search.toLowerCase())
+// }
+// )
+
   
   return (
     <div className='frontend'>
       <div className='up'>
      <div className='top'>
      <div className='search'>
-      <input type='text' className='input' placeholder='search' ></input>
+      <input type='text' onChange={HandleSearch} className='input' placeholder='search' ></input>
       <FiSearch className='icon2'/>
       <AiOutlinePicture className='icon2'/>
       <AiFillStar className='icon2'/>
@@ -35,8 +49,7 @@ export default function FrontEnd() {
         {isLoading?  <h1>Loading..</h1> :
         <div className='users'>
           
-          {users?.slice(skip, skip + PerPage)
-          .map((each)=>{
+          {thesearch(users).slice(skip, skip + PerPage).map((each)=>{
             const {name, picture, location ,login} = each;
             return(
               
