@@ -14,34 +14,38 @@ import BackEnd from "./components/Backend";
 import BackendDetails from "./components/BackendDetails";
 import ErrorPage from "./components/ErrorPage";
 import Privacy from "./components/Privacy";
-
-
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 export default function App() {
   return (
     <div className="App">
       <ApiContextProvider>
-        
-      <AuthContextProvider>
-        <Layout />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/hub" element={<Hub/>}>
-            <Route index element={<IndexPage/>}/>
-            <Route path="frontend" element={<FrontEnd/>}>
-              <Route path=":userId" element={<MoreDetails/>}/>
+        <AuthContextProvider>
+          <Layout />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/hub" element={<Hub />}>
+              <Route index element={<IndexPage />} />
+              <Route path="frontend" element={<FrontEnd />}>
+                <Route path=":userId" element={<MoreDetails />} />
+              </Route>
+              <Route path="backend" element={<BackEnd />}>
+                <Route path=":userId" element={<BackendDetails />} />
+              </Route>
             </Route>
-            <Route path="backend" element={<BackEnd/>}>
-              <Route path=':userId' element={<BackendDetails/> }/>
-            </Route>
-          </Route>
-          <Route path="/privacy" element={<Privacy/>}/>
-          <Route path="/account" element={<Account/>}/>
-          <Route path="*"  element={<ErrorPage/>}/>
-        </Routes>
-      </AuthContextProvider>
+            <Route
+              path="/privacy"
+              element={
+                <ProtectedRoutes>
+                  <Privacy />{" "}
+                </ProtectedRoutes>
+              }
+            />
+            <Route path="/account" element={ <ProtectedRoutes> <Account /> </ProtectedRoutes> } />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </AuthContextProvider>
       </ApiContextProvider>
-
     </div>
   );
 }

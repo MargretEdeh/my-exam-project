@@ -13,14 +13,6 @@ export default function Account() {
 // setTimeout(()=>{alert('login first')} ,1000)
 //       }
 //     }, [user ,Navigate])
-    
-if(!user){
-setTimeout(()=>{alert('login first')} ,1000)
-
-  return( 
-      <Navigate to='/'/>
-  )
-}
     const handleLogout = async () =>{
         try{ await LogOut()
 

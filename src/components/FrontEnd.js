@@ -17,7 +17,7 @@ export default function FrontEnd() {
   };
   const thesearch = (data) => {
     return data.filter((item) =>
-      item.name.first.toLowerCase().includes(search.toLowerCase())
+      item.name.first.toLowerCase().includes(search.toLowerCase() || "" )
     );
   };
 
