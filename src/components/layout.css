@@ -1,11 +1,13 @@
 .layout{
     display: flex;
+    position: sticky;
+    top: 0;
     color: white;
     width: 100vw;
     padding: 5px;
     justify-content: space-between;
     background-color: rgb(20, 18, 18);
-    box-shadow: 0px 0px 4px 2px rgb(87, 85, 85);
+    box-shadow: 0px 0px 2px 0.5px rgb(39, 38, 38);
   }
   .icon{
     font-size: 40px;
