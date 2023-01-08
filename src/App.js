@@ -13,7 +13,6 @@ import MoreDetails from "./components/MoreDetails";
 import BackEnd from "./components/Backend";
 import BackendDetails from "./components/BackendDetails";
 import ErrorPage from "./components/ErrorPage";
-import Privacy from "./components/Privacy";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ErrorGame from "./components/ErrorGame";
 

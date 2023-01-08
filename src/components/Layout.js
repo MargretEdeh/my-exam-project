@@ -26,7 +26,7 @@ export default function Layout() {
          <ul className='large'>
           <li><NavLink style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='links' to='/' end>Home</NavLink> </li>
           <li><NavLink style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link' to='/hub'>Hub</NavLink> </li>
-          <li><NavLink style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link' to='/privacy'>Privacy</NavLink> </li>
+          <li><NavLink style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link' to='/privacy'>Error Game</NavLink> </li>
           <li><NavLink style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link' to='/account'>Account</NavLink> </li>
          </ul>
          {menu ? Cancel: MenuBar}

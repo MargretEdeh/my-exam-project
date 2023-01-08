@@ -5,8 +5,8 @@ import { AiOutlinePicture } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { ApiUserContext } from "./ApiContext";
 import { AiFillStar } from "react-icons/ai";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonCard from "./skeleton";
 export default function FrontEnd() {
   const { users, skip, page, setPage, PerPage, isLoading, pages } =
@@ -17,7 +17,7 @@ export default function FrontEnd() {
   };
   const thesearch = (data) => {
     return data.filter((item) =>
-      item.name.first.toLowerCase().includes(search.toLowerCase() || "" )
+      item.name.first.toLowerCase().includes(search.toLowerCase() || "")
     );
   };
 
@@ -38,40 +38,35 @@ export default function FrontEnd() {
           </div>
           <h2 className="top2">FrontEnd Enthusiast </h2>
         </div>
-          <div className="users">
-        {isLoading && <SkeletonCard card={4}/>
-        }
+        <div className="users">
+          {isLoading && <SkeletonCard card={4} />}
 
-            {thesearch(users)
-              .slice(skip, skip + PerPage)
-              .map((each) => {
-                const { name, picture, location, login } = each;
-                return (
-                  <div className="each-user">
-                    <img
-                      src={picture.large || <Skeleton/>}
-                      alt={name.first}
-                      className="friend"  
-                    />
-                    <div className="details">
-                      <h2 className="name">
-                        Eng. {name.first} {name.last}{" "}
-                      </h2>
-                      <h4 className="city">{location.city}</h4>
-                      <h4 className="name">{location.country} </h4>
-                      <NavLink
-                        key={login.uuid}
-                        className="more"
-                        to={login.uuid}
-                      >
-                        More Details{" "}
-                      </NavLink>
-                    </div>
+          {thesearch(users)
+            .slice(skip, skip + PerPage)
+            .map((each) => {
+              const { name, picture, location, login } = each;
+              return (
+                <div className="each-user">
+                  <img
+                    src={picture.large || <Skeleton />}
+                    alt={name.first}
+                    className="friend"
+                  />
+                  <div className="details">
+                    <h2 className="name">
+                      Eng. {name.first} {name.last}{" "}
+                    </h2>
+                    <h4 className="city">{location.city}</h4>
+                    <h4 className="name">{location.country} </h4>
+                    <NavLink key={login.uuid} className="more" to={login.uuid}>
+                      More Details{" "}
+                    </NavLink>
                   </div>
-                );
-              })}
-          </div>
-        
+                </div>
+              );
+            })}
+        </div>
+
         <div className="paginate">
           {
             <button
