@@ -1,0 +1,109 @@
+.red{
+    background-color: red;
+    color: black;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.white{
+    background-color: white;
+    color: red;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    background-color: green;
+    color: white;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.yellow{
+    background-color: yellow;
+    color: black;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.purple{
+    background-color: purple;
+    color: white;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.orangered{
+    background-color: orange;
+    color: white;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pink{
+    background-color: pink;
+    color: white;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blue{
+    background-color: blue;
+    color: white;
+    margin: 0;
+    padding: 0;height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-text{
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 10px;
+    animation: error 1s infinite;
+}
+.btn{
+    margin: 5em auto;
+}
+@media screen and (max-width: 768px){
+    .error-text{
+        font-size: 20px;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+}
+    
+@keyframes error{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
