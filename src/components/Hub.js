@@ -2,6 +2,7 @@ import React from 'react'
 import { UserContext } from './AuthContext'
 import { Navigate, NavLink , Outlet} from 'react-router-dom'
 import './hub.css'
+import { Helmet } from 'react-helmet-async'
 
 export default function Hub() {
     const {user}= UserContext()
@@ -15,6 +16,11 @@ export default function Hub() {
     
   return (
     <div className='hub-outlet'>
+        <helmet>
+            <title>Hub</title>
+            <meta name='description' content='Hub page'/>
+            <link rel='canonical' href='/hub'/>
+        </helmet>
     <div className='hub'>
         <div>
         <ul className='list'>

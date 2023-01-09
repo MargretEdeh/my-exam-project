@@ -1,6 +1,6 @@
 import { UserContext } from "./AuthContext";
 import pic2 from './pic2.svg'
-
+import { Helmet } from "react-helmet-async";
 
 export default function Account() {
   // const Navigate = useNavigate()
@@ -20,6 +20,11 @@ export default function Account() {
   };
   return (
     <div className="logout">
+      <Helmet>
+        <title>Account</title>
+        <meta name="description" content="Account" />
+        <link rel="canonical" href="/account" />
+      </Helmet>
       <div className="dev1">
         {" "}
         <h2 className="h2-out"> About Developer's Arc </h2>
