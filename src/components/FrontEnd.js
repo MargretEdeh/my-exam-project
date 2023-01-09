@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Outlet, useSearchParams } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "./frontend.css";
 import { AiOutlinePicture } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";

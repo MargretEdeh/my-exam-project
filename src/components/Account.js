@@ -20,7 +20,7 @@ export default function Account() {
   };
   return (
     <div className="logout">
-      <div className="dev">
+      <div className="dev1">
         {" "}
         <h2 className="h2-out"> About Developer's Arc </h2>
         <div>

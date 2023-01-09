@@ -62,8 +62,8 @@ try{ await googleSignIn()
 
 
      <div className='google'>
-     <h3> Sign in with Google <FcGoogle className='google-icon'/></h3> 
-     <button onClick={handleGoogleSignin} className='btn'> <FcGoogle/> Sign In</button>
+     <h3 className='h3-home'> Sign in with Google <FcGoogle className='google-icon'/></h3> 
+     <button onClick={handleGoogleSignin} className='btn-out'> <FcGoogle/> Sign In</button>
 
 
 
