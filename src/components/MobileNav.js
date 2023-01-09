@@ -8,7 +8,7 @@ export default function MobileNav({toggle}) {
         <ul>
           <li><NavLink onClick={toggle} style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link2' to='/' end>Home</NavLink> </li>
           <li><NavLink onClick={toggle} style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link2' to='/hub'>Hub</NavLink> </li>
-          <li><NavLink onClick={toggle} style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link2' to='/privacy'>Privacy</NavLink> </li>
+          <li><NavLink onClick={toggle} style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link2' to='/privacy'>Error Game</NavLink> </li>
           <li><NavLink onClick={toggle} style={({isActive})=> isActive? {color: "white"} : {color: ""}} className='link2' to='/account'>Account</NavLink> </li>
          </ul>
       
