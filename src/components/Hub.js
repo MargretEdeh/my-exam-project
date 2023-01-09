@@ -16,11 +16,11 @@ export default function Hub() {
     
   return (
     <div className='hub-outlet'>
-        <helmet>
+        <Helmet>
             <title>Hub</title>
             <meta name='description' content='Hub page'/>
             <link rel='canonical' href='/hub'/>
-        </helmet>
+        </Helmet>
     <div className='hub'>
         <div>
         <ul className='list'>
